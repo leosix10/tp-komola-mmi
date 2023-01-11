@@ -1,0 +1,110 @@
+/* 1- DEFINIR LE STYLE */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+$fontTxt: "Open Sans", sans-serif;
+$orange: #ed4f2e;
+$bleu1: #1f2c33;
+$bleu2: #283645;
+$gris: #ebebeb;
+$grisP: #454545;
+$grisF: #a3b1bf;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+html {
+    scroll-behavior: smooth;
+    scrollbar-color: $orange $gris;
+    scrollbar-width: thin;
+}
+html::-webkit-scrollbar-track {
+    background-color: $gris;
+}
+html::-webkit-scrollbar {
+    width: 10px;
+    background-color: $gris;
+}
+html::-webkit-scrollbar-thumb {
+    background-color: $orange;
+}
+body{
+    font-family: $fontTxt;
+}
+h1{
+    font-size: 54px
+}
+h2{
+    font-size: 42px;
+    color: $orange;
+    text-transform: uppercase;
+    margin: 12px auto;
+}
+h3{
+    font-size: 36px;
+    color: $bleu1;
+}
+h4{
+    font-size: 24px;
+}
+p{
+    font-size: 16px;
+    color: $bleu1;
+}
+.phrase{
+    max-width: 640px;
+    margin: auto;
+}
+button{
+    border: solid $orange 2px;
+    border-radius: 12px;
+    color: white;
+    background: $orange;
+    cursor: pointer;
+    padding: 12px;
+}
+.boutForm{
+    @extend button;
+    min-width: 120px;
+    font-weight: bold;
+}
+.inputForm{
+    min-height: 50px;
+    border-radius: 10px;
+    padding: 0 20px;
+}
+@mixin blocHaut{
+    display: flex;
+    text-align: center;
+    margin: 56px 4%;
+    background-color: white;
+    border-radius: 40px 40px 0 0;
+    padding: 70px;
+    article{
+        margin: auto;
+    }
+    .lineC{
+        margin: 20px auto;
+    }
+}
+@mixin blocBas{
+    @include blocHaut();
+    border-radius: 0 0 40px 40px;
+}
+
+/* 2- LE HEADER */
+
+@import 'header';
+
+/* 3- LE FOOTER */
+
+@import 'footer';
+
+/* 4- LE RESTE */
+
+@import 'fscreen';
+@import 'main';
+@import 'responsive';

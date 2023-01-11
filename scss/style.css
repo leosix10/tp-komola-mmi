@@ -1,0 +1,603 @@
+/* 1- DEFINIR LE STYLE */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-color: #ed4f2e #ebebeb;
+  scrollbar-width: thin;
+}
+
+html::-webkit-scrollbar-track {
+  background-color: #ebebeb;
+}
+
+html::-webkit-scrollbar {
+  width: 10px;
+  background-color: #ebebeb;
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: #ed4f2e;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+h1 {
+  font-size: 54px;
+}
+
+h2 {
+  font-size: 42px;
+  color: #ed4f2e;
+  text-transform: uppercase;
+  margin: 12px auto;
+}
+
+h3 {
+  font-size: 36px;
+  color: #1f2c33;
+}
+
+h4 {
+  font-size: 24px;
+}
+
+p {
+  font-size: 16px;
+  color: #1f2c33;
+}
+
+.phrase {
+  max-width: 640px;
+  margin: auto;
+}
+
+button, .boutForm, footer #foot1 #subsF .boutFoot {
+  border: solid #ed4f2e 2px;
+  border-radius: 12px;
+  color: white;
+  background: #ed4f2e;
+  cursor: pointer;
+  padding: 12px;
+}
+
+.boutForm, footer #foot1 #subsF .boutFoot {
+  min-width: 120px;
+  font-weight: bold;
+}
+
+.inputForm, footer #foot1 #subsF .inputFoot {
+  min-height: 50px;
+  border-radius: 10px;
+  padding: 0 20px;
+}
+
+/* 2- LE HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 4%;
+  align-items: center;
+}
+header nav ul {
+  display: flex;
+  align-items: center;
+}
+header nav ul li {
+  margin-left: 30px;
+  transition: all 0.2s ease 0.1s;
+}
+header nav ul li:hover {
+  background: #ed4f2e;
+  border-radius: 12px;
+  padding: 10px 20px;
+}
+header nav ul li a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #1f2c33;
+  transition: all 0.2s ease 0.1s;
+}
+header nav ul li a:hover {
+  color: white;
+}
+
+/* 3- LE FOOTER */
+footer #foot1 {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(4, 1fr);
+  background-color: #1f2c33;
+  padding: 80px 4%;
+}
+footer #foot1 h4 {
+  color: white;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+footer #foot1 p {
+  color: #a3b1bf;
+  margin-bottom: 24px;
+}
+footer #foot1 a {
+  color: #a3b1bf;
+  text-decoration: none;
+}
+footer #foot1 #aboutF img {
+  margin-bottom: 20px;
+}
+footer #foot1 #touchF address {
+  display: flex;
+  flex-direction: column;
+}
+footer #foot1 #worksF aside {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+footer #foot1 #worksF aside img {
+  width: 100%;
+}
+footer #foot1 #subsF .inputFoot {
+  border-radius: 8px;
+  background: #404b51;
+  border: none;
+  min-height: 40px;
+  max-width: 68%;
+}
+footer #foot1 #subsF .boutFoot {
+  border-radius: 8px;
+  min-height: 40px;
+  min-width: 80px;
+  padding: 0 10px;
+}
+footer #foot1 #subsF .sns {
+  display: flex;
+  margin-top: 20px;
+  justify-content: space-between;
+}
+footer #foot2 {
+  background-color: #283645;
+  padding: 36px 0;
+  text-align: center;
+}
+footer #foot2 p {
+  color: white;
+}
+
+/* 4- LE RESTE */
+.fullScreen, main #help {
+  display: flex;
+  color: white;
+  text-align: center;
+  background: url(../img/bg_orange.jpg) no-repeat center;
+  height: 100vh;
+}
+.fullScreen article, main #help article {
+  margin: auto;
+  line-height: 1.5;
+}
+.fullScreen article p, main #help article p {
+  margin-top: 24px;
+  color: white;
+}
+.fullScreen article button, main #help article button, .fullScreen article .boutForm, main #help article .boutForm, .fullScreen article footer #foot1 #subsF .boutFoot, main #help article footer #foot1 #subsF .boutFoot, footer #foot1 #subsF .fullScreen article .boutFoot, footer #foot1 #subsF main #help article .boutFoot, main footer #foot1 #subsF #help article .boutFoot {
+  border: solid white 2px;
+  padding: 18px 30px;
+  margin-top: 30px;
+  background: none;
+  font-size: 18px;
+}
+
+main {
+  background-color: #ebebeb;
+}
+main .container, main #pricing {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 1fr;
+  margin: 80px auto;
+}
+main .container .bloc, main #pricing .bloc {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  transition: all 0.2s ease 0.1s;
+}
+main .container .bloc:hover h3, main #pricing .bloc:hover h3 {
+  color: #ed4f2e;
+}
+main .container .bloc:hover img, main #pricing .bloc:hover img {
+  border: #ed4f2e 2px solid;
+  border-radius: 10px;
+}
+main .container .bloc img, main #pricing .bloc img {
+  height: 44px;
+  margin: 12px auto;
+  transition: all 0.2s ease 0.1s;
+}
+main .container .bloc h3, main #pricing .bloc h3 {
+  font-weight: lighter;
+  margin: 12px auto;
+  transition: all 0.2s ease 0.1s;
+}
+main .container .bloc p, main #pricing .bloc p {
+  color: #454545;
+}
+main #our_services {
+  display: flex;
+  text-align: center;
+  margin: 56px 4%;
+  background-color: white;
+  border-radius: 40px 40px 0 0;
+  padding: 70px;
+}
+main #our_services article {
+  margin: auto;
+}
+main #our_services .lineC {
+  margin: 20px auto;
+}
+main #our_services #serv1 {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+main #our_services #serv2 {
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+main #our_services #serv3 {
+  grid-column: 3/4;
+  grid-row: 1/2;
+}
+main #our_services #serv4 {
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+main #our_services #serv5 {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+main #our_services #serv6 {
+  grid-column: 3/4;
+  grid-row: 2/3;
+}
+main #video {
+  background: url("../img/bg_video.jpg") no-repeat;
+  min-height: 580px;
+  display: flex;
+}
+main #video a {
+  margin: auto;
+}
+main #pricing {
+  display: flex;
+  text-align: center;
+  margin: 56px 4%;
+  background-color: white;
+  border-radius: 40px 40px 0 0;
+  padding: 70px;
+  border-radius: 0 0 40px 40px;
+}
+main #pricing article {
+  margin: auto;
+}
+main #pricing .lineC {
+  margin: 20px auto;
+}
+main #pricing .container, main #pricing #pricing {
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+  grid-gap: 24px;
+  margin: 60px auto;
+  align-items: center;
+}
+main #pricing .container .bloc, main #pricing #pricing .bloc {
+  border: solid 2px #ebebeb;
+  padding: 0;
+  transition: all 0.2s ease 0.1s;
+}
+main #pricing .container .bloc:hover, main #pricing #pricing .bloc:hover {
+  padding: 30px 0;
+  border: #ed4f2e 2px solid;
+}
+main #pricing .container .bloc:hover span, main #pricing #pricing .bloc:hover span {
+  background-color: #ed4f2e;
+  color: white;
+}
+main #pricing .container .bloc h4, main #pricing #pricing .bloc h4 {
+  margin: 24px auto;
+}
+main #pricing .container .bloc span, main #pricing #pricing .bloc span {
+  background-color: #ebebeb;
+  font-size: 24px;
+  padding: 20px 0;
+  transition: all 0.2s ease 0.1s;
+}
+main #pricing .container .bloc span b, main #pricing #pricing .bloc span b {
+  font-size: 48px;
+}
+main #pricing .container .bloc ul, main #pricing #pricing .bloc ul {
+  list-style: none;
+  padding: 20px 30px;
+}
+main #pricing .container .bloc ul li, main #pricing #pricing .bloc ul li {
+  color: #454545;
+  margin: 8px auto;
+}
+main #pricing .container .bloc button, main #pricing #pricing .bloc button, main #pricing .container .bloc .boutForm, main #pricing #pricing .bloc .boutForm, main #pricing .container .bloc footer #foot1 #subsF .boutFoot, footer #foot1 #subsF main #pricing .container .bloc .boutFoot, main #pricing #pricing .bloc footer #foot1 #subsF .boutFoot, footer #foot1 #subsF main #pricing #pricing .bloc .boutFoot {
+  margin: 24px auto;
+  padding: 10px 30px;
+  border-radius: 8px;
+}
+main #pricing .container #prix1, main #pricing #pricing #prix1 {
+  grid-column: 1/2;
+}
+main #pricing .container #prix2, main #pricing #pricing #prix2 {
+  grid-column: 2/3;
+}
+main #pricing .container #prix3, main #pricing #pricing #prix3 {
+  grid-column: 3/4;
+}
+main #pricing .container #prix4, main #pricing #pricing #prix4 {
+  grid-column: 4/5;
+}
+main #help {
+  background: url("../img/bg_bleu.jpg") no-repeat;
+  height: 510px;
+}
+main #help article h3, main #help article h4 {
+  color: white;
+}
+main #help article h4 {
+  font-weight: lighter;
+}
+main #help article button, main #help article .boutForm, main #help article footer #foot1 #subsF .boutFoot, footer #foot1 #subsF main #help article .boutFoot {
+  text-transform: uppercase;
+  padding: 12px 30px;
+  transition: all 0.2s ease 0.1s;
+}
+main #help article button:hover, main #help article .boutForm:hover, main #help article footer #foot1 #subsF .boutFoot:hover, footer #foot1 #subsF main #help article .boutFoot:hover {
+  color: #ed4f2e;
+  border: #ed4f2e 2px solid;
+}
+main #blog {
+  display: flex;
+  text-align: center;
+  margin: 56px 4%;
+  background-color: white;
+  border-radius: 40px 40px 0 0;
+  padding: 70px;
+}
+main #blog article {
+  margin: auto;
+}
+main #blog .lineC {
+  margin: 20px auto;
+}
+main #blog ul {
+  display: flex;
+  margin: 30px auto;
+  justify-content: center;
+  list-style: none;
+}
+main #blog ul li {
+  color: #1f2c33;
+  padding: 0 10px;
+  transition: all 0.2s ease 0.1s;
+}
+main #blog ul li:hover {
+  background-color: #ed4f2e;
+  padding: 0 10px;
+  border-radius: 8px;
+}
+main #blog ul li:hover a {
+  color: white;
+}
+main #blog ul li a {
+  text-decoration: none;
+  color: #1f2c33;
+  font-weight: bold;
+  transition: all 0.2s ease 0.1s;
+}
+main #blog .gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+main #blog .gallery img {
+  width: 100%;
+}
+main #happySubs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 510px;
+}
+main #happySubs .customer, main #happySubs .newsletter {
+  grid-column: 1/2;
+  background: url("../img/bg_customer.jpg") no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 50px;
+}
+main #happySubs .customer h2, main #happySubs .newsletter h2 {
+  color: white;
+}
+main #happySubs .customer q, main #happySubs .newsletter q {
+  color: white;
+  font-size: 14px;
+  line-height: 28px;
+  font-weight: lighter;
+}
+main #happySubs .customer img, main #happySubs .newsletter img {
+  margin: 20px;
+}
+main #happySubs .customer .dotsContain, main #happySubs .newsletter .dotsContain {
+  display: flex;
+}
+main #happySubs .customer .dotsContain .dot, main #happySubs .newsletter .dotsContain .dot {
+  height: 12px;
+  width: 12px;
+  margin: 4px;
+  border-radius: 50%;
+  background: white;
+}
+main #happySubs .customer .dotsContain #point, main #happySubs .newsletter .dotsContain #point {
+  background-color: #a7290e;
+}
+main #happySubs .newsletter {
+  grid-column: 2/3;
+  background: url("../img/bg_subscribe.jpg") no-repeat;
+}
+main #happySubs .newsletter .inputForm, main #happySubs .newsletter footer #foot1 #subsF .inputFoot, footer #foot1 #subsF main #happySubs .newsletter .inputFoot {
+  background: none;
+  border: 1px white solid;
+  min-width: 360px;
+  margin-bottom: 24px;
+}
+main #contact {
+  display: flex;
+  text-align: center;
+  margin: 56px 4%;
+  background-color: white;
+  border-radius: 40px 40px 0 0;
+  padding: 70px;
+  border-radius: 0 0 40px 40px;
+}
+main #contact article {
+  margin: auto;
+}
+main #contact .lineC {
+  margin: 20px auto;
+}
+main #contact #contactForm {
+  display: grid;
+  gap: 15px;
+  grid-template-columns: 1fr 1fr;
+}
+main #contact .inputForm, main #contact footer #foot1 #subsF .inputFoot, footer #foot1 #subsF main #contact .inputFoot {
+  border: 1px #ebebeb solid;
+  font-family: "Open Sans", sans-serif;
+}
+main #contact #messageCont {
+  grid-column: 1/3;
+  min-height: 290px;
+  padding-bottom: 240px;
+}
+main #contact #flexBout {
+  grid-column: 1/3;
+}
+
+@media screen and (max-width: 960px) {
+  main #our_services .container, main #our_services #pricing {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+  main #our_services .container #serv2, main #our_services #pricing #serv2 {
+    grid-column: 2/3;
+  }
+  main #our_services .container #serv3, main #our_services #pricing #serv3 {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  main #our_services .container #serv4, main #our_services #pricing #serv4 {
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+  main #our_services .container #serv5, main #our_services #pricing #serv5 {
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+  main #our_services .container #serv6, main #our_services #pricing #serv6 {
+    grid-column: 2/3;
+    grid-row: 3/4;
+  }
+  main #pricing .container, main #pricing #pricing {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  main #pricing .container #prix2, main #pricing #pricing #prix2 {
+    grid-column: 2/3;
+  }
+  main #pricing .container #prix3, main #pricing #pricing #prix3 {
+    grid-column: 1/2;
+  }
+  main #pricing .container #prix4, main #pricing #pricing #prix4 {
+    grid-column: 2/3;
+  }
+  main #blog .gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 480px) {
+  main #our_services .container, main #our_services #pricing {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+  }
+  main #our_services .container #serv2, main #our_services #pricing #serv2 {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  main #our_services .container #serv3, main #our_services #pricing #serv3 {
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+  main #our_services .container #serv4, main #our_services #pricing #serv4 {
+    grid-column: 1/2;
+    grid-row: 4/5;
+  }
+  main #our_services .container #serv5, main #our_services #pricing #serv5 {
+    grid-column: 1/2;
+    grid-row: 5/6;
+  }
+  main #our_services .container #serv6, main #our_services #pricing #serv6 {
+    grid-column: 1/2;
+    grid-row: 6/7;
+  }
+  main #pricing .container, main #pricing #pricing {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+  }
+  main #pricing .container #prix2, main #pricing #pricing #prix2 {
+    grid-column: 1/2;
+  }
+  main #pricing .container #prix3, main #pricing #pricing #prix3 {
+    grid-column: 1/2;
+  }
+  main #pricing .container #prix4, main #pricing #pricing #prix4 {
+    grid-column: 1/2;
+  }
+  main #blog .gallery {
+    grid-template-columns: 1fr;
+  }
+  main #happySubs {
+    grid-template-columns: 1fr;
+  }
+  main #happySubs .newsletter {
+    grid-column: 1/2;
+  }
+  main #contact #contactForm {
+    grid-template-columns: 1fr;
+  }
+  main #contact #contactForm input {
+    grid-column: 1/2;
+  }
+
+  footer #foot1 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

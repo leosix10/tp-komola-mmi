@@ -1,0 +1,73 @@
+footer{
+    #foot1{
+        display: grid;
+        gap: 30px;
+        grid-template-columns: repeat(4, 1fr);
+        background-color: $bleu1;
+        padding: 80px 4%;
+        h4{
+            color: white;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+        }
+        p{
+            color: $grisF;
+            margin-bottom: 24px;
+        }
+        a{
+            color: $grisF;
+            text-decoration: none;
+        }
+        #aboutF{
+            img{
+                margin-bottom: 20px;
+            }
+        }
+        #touchF{
+            address{
+                display: flex;
+                flex-direction: column;
+            }
+        }
+        #worksF{
+            aside{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 8px;
+                img{
+                    width: 100%;
+                }
+            }
+        }
+        #subsF{
+            .inputFoot{
+                @extend .inputForm;
+                border-radius: 8px;
+                background: #404b51;
+                border: none;
+                min-height: 40px;
+                max-width: 68%;
+            }
+            .boutFoot{
+                @extend .boutForm;
+                border-radius: 8px;
+                min-height: 40px;
+                min-width: 80px;
+                padding: 0 10px;
+            }
+            .sns{
+                display: flex;
+                margin-top: 20px;
+                justify-content: space-between;
+            }
+        }
+    }
+    #foot2{
+        background-color: $bleu2;
+        padding: 36px 0;
+        text-align: center;
+        p{
+            color: white;
+        }
+    }
+}

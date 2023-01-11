@@ -1,0 +1,119 @@
+@media screen and (max-width: 960px){
+    main{
+        #our_services{
+            .container{
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr 1fr;
+                #serv2{
+                    grid-column: 2 / 3;
+                }
+                #serv3{
+                    grid-column: 1 / 2;
+                    grid-row: 2 / 3;
+                }
+                #serv4{
+                    grid-column: 2 / 3;
+                    grid-row: 2 / 3;
+                }
+                #serv5{
+                    grid-column: 1 / 2;
+                    grid-row: 3 / 4;
+                }
+                #serv6{
+                    grid-column: 2 / 3;
+                    grid-row: 3 / 4;
+                }
+            }
+        }
+        #pricing{
+            .container{
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr;
+                #prix2{
+                    grid-column: 2 / 3;
+                }
+                #prix3{
+                    grid-column: 1 / 2;
+                }
+                #prix4{
+                    grid-column: 2 / 3;
+                }
+            }
+        }
+        #blog{
+            .gallery{
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px){
+    main{
+        #our_services{
+            .container{
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(6, 1fr);
+                #serv2{
+                    grid-column: 1 / 2;
+                    grid-row: 2 / 3;
+                }
+                #serv3{
+                    grid-column: 1 / 2;
+                    grid-row: 3 / 4;
+                }
+                #serv4{
+                    grid-column: 1 / 2;
+                    grid-row: 4 / 5;
+                }
+                #serv5{
+                    grid-column: 1 / 2;
+                    grid-row: 5 / 6;
+                }
+                #serv6{
+                    grid-column: 1 / 2;
+                    grid-row: 6 / 7;
+                }
+            }
+        }
+        #pricing{
+            .container{
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(4, 1fr);
+                #prix2{
+                    grid-column: 1 / 2;
+                }
+                #prix3{
+                    grid-column: 1 / 2;
+                }
+                #prix4{
+                    grid-column: 1 / 2;
+                }
+            }
+        }
+        #blog{
+            .gallery{
+                grid-template-columns: 1fr;
+            }
+        }
+        #happySubs{
+            grid-template-columns: 1fr;
+            .newsletter{
+                grid-column: 1 / 2;
+            }
+        }
+        #contact{
+            #contactForm{
+                grid-template-columns: 1fr;
+                input{
+                    grid-column: 1 / 2;
+                }
+            }
+        }
+    }
+    footer{
+        #foot1{
+            grid-template-columns: 1fr;
+        }
+    }
+}
